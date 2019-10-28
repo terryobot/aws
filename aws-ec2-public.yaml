@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  This cloudformation code uses a custom AWS AMI to deploy an EC2 instance
+  This cloudformation code uses an AMI to deploy an EC2 instance
   into an existing subnet & & security group. This Code Needs improvement ++ can be modified for other purposes.
 Parameters:
   KeyName:
