@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   This cloudformation script uses a custom AWS AMI to deploy an EC2 instance
-  into a defined subnet & security group .
+  into a defined subnet & security group. It also creates an elastic ip which is attached during the instance initialize.
 Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to connection to the host
@@ -26,12 +26,12 @@ Parameters:
     Default: ""
     
   SourceSecurityGroupId:
-    Description: security group to be used for access to ec2 instance
+    Description: EC2 ingress/egress Security Group
     Type: 'List<AWS::EC2::SecurityGroup::Id>'
     Default: ""
     
   AMI:
-    Description: The Id of the ami to be launched 
+    Description: The Id of the AMI to be launched 
     Type: String
     Default: ""
     
